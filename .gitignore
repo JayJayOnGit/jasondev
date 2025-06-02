@@ -1,2 +1,2 @@
-/.prettierignore
-/_notes
+.prettierignore
+_*
