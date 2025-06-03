@@ -209,8 +209,8 @@ ul {
   gap: 2rem;
 }
 
-.project img,
-.project iframe {
+.project > img,
+.project > iframe {
   width: 100%;
 }
 
