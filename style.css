@@ -90,6 +90,7 @@ ul {
   flex-wrap: wrap;
   gap: 0 0.5rem;
   margin-top: 0.25rem;
+  margin-bottom: 1rem;
 }
 
 .tech-tag {
@@ -141,6 +142,7 @@ ul {
   display: flex;
 
   scroll-snap-align: start;
+  color: #222;
 }
 
 .color-block {
@@ -204,7 +206,7 @@ ul {
 #all-projects {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .project img,
