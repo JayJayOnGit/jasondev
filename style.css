@@ -13,11 +13,11 @@
 
 a {
   text-decoration: none;
+  color: unset;
 }
 
 html {
   background-image: url(assets/tile.png);
-  scroll-snap-type: y proximity;
   scroll-behavior: smooth;
   font-size: 120%;
 }
@@ -249,6 +249,34 @@ footer {
 
 .project > p {
   text-align: justify;
+}
+
+#contact-block {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.5rem;
+  margin: auto;
+  text-align: center;
+}
+
+#contact-block button {
+  width: 100%;
+  padding: 0.5rem;
+
+  border: solid 1px white;
+  color: white;
+  background: none;
+
+  font-weight: bolder;
+
+  transition: all;
+  transition-duration: 250ms;
+}
+
+#contact-block button:hover {
+  background-color: white;
+  color: var(--main);
 }
 
 .marquee-container {
