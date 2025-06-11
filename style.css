@@ -88,6 +88,7 @@ footer {
 .nav-item h3 {
   display: none;
   align-self: center;
+  padding: 0 0.25rem;
 }
 
 .nav-item:hover h3 {
@@ -280,9 +281,43 @@ footer {
 }
 
 .marquee-container {
-  width: 60%;
+  position: relative;
+  width: 80%;
   margin: 1rem auto;
+  padding-bottom: 0.5rem;
   overflow: hidden;
+}
+
+.marquee-container::before {
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 10%;
+  height: 100%;
+  background: #ffffff;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.marquee-container::after {
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 10%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: #ffffff;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }
 
 .marquee-row {
@@ -364,6 +399,6 @@ footer {
   }
 
   .marquee-container {
-    width: 90%;
+    width: 95%;
   }
 }
