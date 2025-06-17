@@ -27,6 +27,11 @@ ul {
   list-style-type: square;
 }
 
+.project > img,
+.project > video {
+  border: 1px solid black;
+}
+
 footer {
   text-align: center;
   padding: 0.25rem;
@@ -117,7 +122,6 @@ footer {
   box-shadow: 1px 1px 2px 0 rgba(7, 52, 97, 0.12);
 
   border: var(--second) 1px solid;
-  border-radius: 4px;
 
   transition: all;
   transition-duration: 100ms;
@@ -195,6 +199,10 @@ footer {
 .highlight:hover {
   background: var(--main);
   color: white;
+}
+
+.deactivated {
+  opacity: 0.4;
 }
 
 #home-body {
