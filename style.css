@@ -34,10 +34,12 @@ ul {
 }
 
 footer {
-  text-align: center;
-  padding: 0.25rem;
+  position: absolute;
+  bottom: 0;
 
-  scroll-snap-align: end;
+  width: 100%;
+  text-align: center;
+  margin: 0.5rem 0;
 
   user-select: none;
 }
@@ -166,6 +168,7 @@ footer {
 }
 
 .color-block {
+  position: relative;
   color: white !important;
   background-color: var(--main) !important;
 }
@@ -421,5 +424,9 @@ footer {
 
   .marquee-container {
     width: 95%;
+  }
+
+  footer {
+    margin-bottom: 4rem;
   }
 }
