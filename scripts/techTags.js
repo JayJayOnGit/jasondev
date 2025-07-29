@@ -8,13 +8,15 @@ fetch("tags.json")
 
       if (data[key]) {
         const newHTML = `
-              <div class="tech-tag">
-                <img src="${data[key]}" alt="${key}" />
-                <p>${key}</p>
-              </div>
-            `;
+          <div class="tech-tag-container">
+            <div class="tech-tag">
+              <img src="${data[key]}" alt="${key}" />
+              <p>${key}</p>
+            </div>
+          </div>
+        `;
 
-        div.innerHTML = newHTML;
+        div.outerHTML = newHTML;
       }
     });
 
@@ -23,9 +25,11 @@ fetch("tags.json")
 
     const tags = Object.entries(data).map(([key, value]) => {
       return `
-        <div class="tech-tag">
-          <img src="${value}" alt="${key}" />
-          <p>${key}</p>
+        <div class="tech-tag-container">
+          <div class="tech-tag">
+            <img src="${value}" alt="${key}" />
+            <p>${key}</p>
+          </div>
         </div>
       `;
     });

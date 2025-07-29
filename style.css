@@ -2,6 +2,7 @@
   --main: dodgerblue;
   --second: rgba(7, 52, 97);
   --edge: rgb(75, 110, 141);
+  --mq-speed: 40s;
 }
 
 * {
@@ -108,6 +109,10 @@ footer {
   margin-bottom: 1rem;
 }
 
+.tech-tag-container {
+  cursor: pointer;
+}
+
 .tech-tag {
   display: flex;
   flex-direction: row;
@@ -125,17 +130,16 @@ footer {
 
   transition: all;
   transition-duration: 100ms;
-  cursor: pointer;
 }
 
-.tech-tag:hover {
+.tech-tag-container:hover > .tech-tag {
   background-color: var(--second);
 
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
 }
 
-.tech-tag:hover p {
+.tech-tag-container:hover p {
   color: white;
 }
 
@@ -335,7 +339,7 @@ footer {
 }
 
 .marquee-row-1 {
-  animation: scroll-left 40s linear infinite;
+  animation: scroll-left var(--mq-speed) linear infinite;
 }
 
 @keyframes scroll-left {
@@ -346,7 +350,7 @@ footer {
 
 .marquee-row-2 {
   float: right;
-  animation: scroll-right 40s linear infinite;
+  animation: scroll-right var(--mq-speed) linear infinite;
 }
 
 @keyframes scroll-right {
@@ -355,7 +359,16 @@ footer {
   }
 }
 
+#icons8 {
+  text-decoration: underline !important;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 960px) {
+  :root {
+    --mq-speed: 25s;
+  }
+
   html {
     font-size: 100%;
   }
